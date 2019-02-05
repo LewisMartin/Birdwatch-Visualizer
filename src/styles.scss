@@ -22,3 +22,15 @@ body {
     background-color: $color--theme-primary;
     font-family: sans-serif !important;
 }
+
+#outlet-container {
+    max-width: 1024px;
+    margin:0px auto;
+    padding: 20px;
+}
+
+.content-container {
+    background-color: $color--modal-background;
+    width: 100%;
+    margin: 20px auto;
+}
