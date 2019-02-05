@@ -1,1 +1,24 @@
-/* You can add global styles to this file, and also import other style files */
+@import '@angular/material/prebuilt-themes/deeppurple-amber.css';
+@import '~@angular/material/theming';
+
+$color--theme-primary: #1d2127;
+$color--modal-background: rgb(245, 245, 245);
+
+// Define a custom typography config
+$custom-typography: mat-typography-config(
+  $font-family: sans-serif
+);
+@include mat-core($custom-typography);
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    outline: none;
+}
+
+body {
+    background-color: $color--theme-primary;
+    font-family: sans-serif !important;
+}
