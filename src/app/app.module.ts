@@ -4,10 +4,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { NavComponent } from './nav/nav.component';
-import { OverviewComponent } from './overview/overview.component';
-import { BreakdownComponent } from './breakdown/breakdown.component';
-import { TrackerComponent } from './tracker/tracker.component';
+import { NavComponent } from './components/nav/nav.component';
+import { OverviewComponent } from './components/overview/overview.component';
+import { BreakdownComponent } from './components/breakdown/breakdown.component';
+import { TrackerComponent } from './components/tracker/tracker.component';
 
 @NgModule({
   declarations: [
