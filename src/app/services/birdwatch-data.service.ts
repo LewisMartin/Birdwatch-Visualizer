@@ -10,6 +10,6 @@ export class BirdwatchDataService {
 
   public getBirdwatchData()
   {
-    return this._http.get('/assets/datasource.json');
+    return this._http.get('assets/datasource.json');
   }
 }
