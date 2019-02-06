@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Birdwatches } from 'src/app/models/Birdwatches';
+import { BirdwatchDataService } from 'src/app/services/birdwatch-data.service';
 
 @Component({
   selector: 'app-overview',
@@ -7,9 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class OverviewComponent implements OnInit {
 
-  constructor() { }
+  birdwatches: Birdwatches;
+
+  constructor(private _dataService: BirdwatchDataService) { }
 
   ngOnInit() {
+    this._dataService.getBirdwatchData().subscribe((data: Birdwatches) => {
+      this.birdwatches = data;
+      console.log(JSON.stringify(this.birdwatches));
+    })
   }
 
 }

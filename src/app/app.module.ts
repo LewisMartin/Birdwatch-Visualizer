@@ -10,6 +10,9 @@ import { OverviewComponent } from './components/overview/overview.component';
 import { BreakdownComponent } from './components/breakdown/breakdown.component';
 import { TrackerComponent } from './components/tracker/tracker.component';
 
+import { BirdwatchDataService } from './services/birdwatch-data.service';
+import { HttpClientModule } from '@angular/common/http';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,10 +24,13 @@ import { TrackerComponent } from './components/tracker/tracker.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
     BrowserAnimationsModule,
     MaterialModule
   ],
-  providers: [],
+  providers: [
+    BirdwatchDataService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
