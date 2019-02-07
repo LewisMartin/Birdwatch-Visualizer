@@ -1,3 +1,26 @@
-<div class="content-container">
-  breakdown works!
+<loading-spinner *ngIf="!pageInitialized"></loading-spinner>
+
+<div class="content-container" *ngIf="pageInitialized">
+  <h3>Yearly Breakdown</h3>
+  <div class="control-bar">
+    <mat-form-field>
+      <mat-select placeholder="Year" [(value)]="initialYear" (selectionChange)="updateChartData($event)">
+        <mat-option *ngFor="let year of birdwatchYearOptions" [value]="year.value">
+          {{ year.viewValue }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+  <div class="breakdown-stats">
+    <span>{{ selectedYearBirdCount }} total birds</span>
+    <span class="fl-right">{{ selectedYearSpeciesCount }} different species</span>
+  </div>
+  <div class="canvas-container" *ngIf="breakdownChartData">
+    <canvas baseChart
+            [data]="breakdownChartData"
+            [labels]="breakdownChartLabels"
+            [options]="breakdownChartOptions"
+            [chartType]="breakdownChartType">
+    </canvas>
+  </div>
 </div>

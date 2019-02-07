@@ -16,7 +16,6 @@ export class OverviewComponent implements OnInit {
   ngOnInit() {
     this._dataService.getBirdwatchData().subscribe((data: Birdwatches) => {
       this.birdwatches = data;
-      console.log(JSON.stringify(this.birdwatches));
     })
   }
 

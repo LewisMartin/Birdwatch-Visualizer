@@ -1,0 +1,35 @@
+.breakdown-stats {
+    padding: 8px 20px;
+}
+
+.canvas-container {
+    padding: 20px;
+}
+
+canvas {
+    height: 600px !important;
+}
+
+@media (max-width:500px) and (min-width:460px) {
+    canvas {
+        height: 580px !important;
+    }
+}
+
+@media (max-width:460px) and (min-width:420px) {
+    canvas {
+        height: 550px !important;
+    }
+}
+
+@media (max-width:420px) and (min-width:400px) {
+    canvas {
+        height: 500px !important;
+    }
+}
+
+@media (max-width:400px) and (min-width:0px) {
+    canvas {
+        height: 450px !important;
+    }
+}

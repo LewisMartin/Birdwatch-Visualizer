@@ -2,14 +2,14 @@
 @import '~@angular/material/theming';
 
 $color--theme-primary: #1d2127;
-$color--modal-background: rgb(245, 245, 245);
+$color--modal-background: rgb(252, 252, 252);
+$color--model-header-background: rgb(245, 245, 245);
 
 // Define a custom typography config
 $custom-typography: mat-typography-config(
   $font-family: sans-serif
 );
 @include mat-core($custom-typography);
-
 
 * {
     box-sizing: border-box;
@@ -23,14 +23,33 @@ body {
     font-family: sans-serif !important;
 }
 
+h3 {
+    font-weight: normal;
+    padding: 20px;
+    background-color: $color--model-header-background;
+}
+
+ul {
+    list-style-type: none;
+    margin-bottom: 0px;
+}
+
 #outlet-container {
     max-width: 1024px;
     margin:0px auto;
     padding: 20px;
 }
 
+.fl-right {
+    float: right;
+}
+
 .content-container {
     background-color: $color--modal-background;
     width: 100%;
     margin: 20px auto;
+}
+
+.control-bar {
+    padding: 8px 15px;
 }
