@@ -11,6 +11,7 @@ import { NavComponent } from './components/nav/nav.component';
 import { OverviewComponent } from './components/overview/overview.component';
 import { BreakdownComponent } from './components/breakdown/breakdown.component';
 import { TrackerComponent } from './components/tracker/tracker.component';
+import { LoadingSpinnerComponent } from './components/loading-spinner/loading-spinner.component';
 
 import { BirdwatchDataService } from './services/birdwatch-data.service';
 
@@ -20,7 +21,8 @@ import { BirdwatchDataService } from './services/birdwatch-data.service';
     NavComponent,
     OverviewComponent,
     BreakdownComponent,
-    TrackerComponent
+    TrackerComponent,
+    LoadingSpinnerComponent
   ],
   imports: [
     BrowserModule,
