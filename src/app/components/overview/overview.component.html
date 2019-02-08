@@ -1,3 +1,5 @@
-<div class="content-container">
+<loading-spinner *ngIf="!pageInitialized"></loading-spinner>
+
+<div class="content-container" *ngIf="pageInitialized">
   overview works!
 </div>

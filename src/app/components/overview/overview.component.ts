@@ -9,13 +9,16 @@ import { BirdwatchDataService } from 'src/app/services/birdwatch-data.service';
 })
 export class OverviewComponent implements OnInit {
 
-  birdwatches: Birdwatches;
+  public birdwatches: Birdwatches;
+  public pageInitialized: boolean = false;
 
   constructor(private _dataService: BirdwatchDataService) { }
 
   ngOnInit() {
     this._dataService.getBirdwatchData().subscribe((data: Birdwatches) => {
       this.birdwatches = data;
+
+      this.pageInitialized = true;
     })
   }
 
