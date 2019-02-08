@@ -1,5 +1,13 @@
 <loading-spinner *ngIf="!pageInitialized"></loading-spinner>
 
 <div class="content-container" *ngIf="pageInitialized">
-  overview works!
+  <h3>Overview</h3>
+  <div class="stat-card-container">
+    <div *ngFor="let stat of overviewStatistics; let i = index">
+      <div class="stat-card" [ngStyle]="{ 'border-bottom': '8px solid ' + statsColourCodes[i] + ''}">
+          <div class="stat-val">{{ stat[1] }}</div>
+          <div class="stat-label">{{ stat[0] }}</div>
+      </div>
+    </div>
+  </div>
 </div>
