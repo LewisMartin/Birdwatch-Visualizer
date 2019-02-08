@@ -1,3 +1,14 @@
-<div class="content-container">
-  tracker works!
+<loading-spinner *ngIf="!pageInitialized"></loading-spinner>
+
+<div class="content-container" *ngIf="pageInitialized">
+  <h3>Species tracker</h3>
+  <div class="canvas-container" *ngIf="trackerChartData">
+      <canvas baseChart
+              #trackerChart = 'base-chart'
+              [datasets]="trackerChartData"
+              [labels]="trackerChartLabels"
+              [options]="trackerChartOptions"
+              [chartType]="trackerChartType">
+      </canvas>
+    </div>
 </div>

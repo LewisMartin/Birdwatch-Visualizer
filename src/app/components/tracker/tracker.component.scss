@@ -1,0 +1,53 @@
+.tracker-stats {
+    padding: 15px 20px;
+}
+
+.canvas-container {
+    padding: 20px;
+}
+
+canvas {
+    height: 500px !important;
+}
+
+@media (max-width:850px) and (min-width:700px) {
+    canvas {
+        height: 450px !important;
+    }
+}
+
+@media (max-width:700px) and (min-width:500px) {
+    canvas {
+        height: 400px !important;
+    }
+}
+
+@media (max-width:500px) and (min-width:460px) {
+    canvas {
+        height: 420px !important;
+    }
+}
+
+@media (max-width:460px) and (min-width:420px) {
+    canvas {
+        height: 480px !important;
+    }
+}
+
+@media (max-width:420px) and (min-width:400px) {
+    canvas {
+        height: 500px !important;
+    }
+}
+
+@media (max-width:400px) and (min-width:340px) {
+    canvas {
+        height: 520px !important;
+    }
+}
+
+@media (max-width:340px) and (min-width:0px) {
+    canvas {
+        height: 600px !important;
+    }
+}

@@ -1,7 +1,7 @@
 <loading-spinner *ngIf="!pageInitialized"></loading-spinner>
 
 <div class="content-container" *ngIf="pageInitialized">
-  <h3>Yearly Breakdown</h3>
+  <h3>Yearly breakdown</h3>
   <div class="control-bar">
     <mat-form-field>
       <mat-select placeholder="Year" [(value)]="initialYear" (selectionChange)="updateChartData($event)">

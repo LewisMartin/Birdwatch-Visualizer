@@ -44,7 +44,6 @@ export enum BirdSpecies
     Piedwagtail = "Pied wagtail",
     Greywagtail = "Grey wagtail",
     Greatspottedwoodpecker = "Great spotted woodpecker",
-    Greenwoodpecker = "Green woodpecker",
     Carrioncrow = "Carrion crow",
     Greenfinch = "Greenfinch",
     Lesserredpoll = "Lesser redpoll",
