@@ -1,11 +1,11 @@
 <mat-toolbar mat-app-background>
   <mat-toolbar-row>
-    <span class="app-title" [routerLink]="['/']">Birdwatch-Visualizer</span>
+    <span class="app-title" routerLink="['/']">Birdwatch-Visualizer</span>
     <span class="nav-spacer"></span>
-    <mat-icon class="hamburger" [matMenuTriggerFor]="submenu">menu</mat-icon>
+    <mat-icon id="hamburger" class="hamburger" [matMenuTriggerFor]="submenu">menu</mat-icon>
     <mat-menu #submenu="matMenu">
-      <button mat-menu-item [routerLink]="['breakdown']">Yearly breakdown</button>
-      <button mat-menu-item [routerLink]="['tracker']">Species tracker</button>
+      <button class="breakdown-link" mat-menu-item routerLink="['breakdown']">Yearly breakdown</button>
+      <button class="tracker-link" mat-menu-item routerLink="['tracker']">Species tracker</button>
     </mat-menu>
   </mat-toolbar-row>
 </mat-toolbar>
