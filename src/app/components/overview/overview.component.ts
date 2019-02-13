@@ -9,7 +9,7 @@ import { BirdwatchDataService } from 'src/app/services/birdwatch-data.service';
 })
 export class OverviewComponent implements OnInit {
 
-  public birdwatches: Birdwatches;
+  public birdwatchData: Birdwatches;
   public pageInitialized: boolean = false;
 
   public overviewStatistics: Array<[string, string]> = new Array<[string, string]>();
@@ -19,7 +19,7 @@ export class OverviewComponent implements OnInit {
 
   ngOnInit() {
     this._dataService.getBirdwatchData().subscribe((data: Birdwatches) => {
-      this.birdwatches = data;
+      this.birdwatchData = data;
 
       this.initStatistics();
 
@@ -47,13 +47,13 @@ export class OverviewComponent implements OnInit {
   }
 
   addCountOfWatches() {
-    this.overviewStatistics.push(["years worth of data", this.birdwatches.birdWatches.length.toString()]);
+    this.overviewStatistics.push(["years worth of data", this.birdwatchData.birdWatches.length.toString()]);
   }
 
   addCountSpeciesRecorded() {
     var hashMap: Map<string, number> = new Map<string, number>();
 
-    this.birdwatches.birdWatches.forEach((birdwatch) => {
+    this.birdwatchData.birdWatches.forEach((birdwatch) => {
       birdwatch.sightings.forEach((sighting) => {
         if(!hashMap.has(sighting.species)) { 
           hashMap.set(sighting.species, 0);
@@ -70,7 +70,7 @@ export class OverviewComponent implements OnInit {
     var highestCount = 0;
     var yearWithHighestCount = '';
 
-    this.birdwatches.birdWatches.forEach((birdwatch) => {
+    this.birdwatchData.birdWatches.forEach((birdwatch) => {
       let thisCount = 0;
 
       birdwatch.sightings.forEach((sighting) => {
@@ -90,7 +90,7 @@ export class OverviewComponent implements OnInit {
     var highestCount = 0;
     var yearWithHighestCount = '';
 
-    this.birdwatches.birdWatches.forEach((birdwatch) => {
+    this.birdwatchData.birdWatches.forEach((birdwatch) => {
       let thisCount = birdwatch.sightings.length;
 
       if(thisCount > highestCount) {
@@ -105,7 +105,7 @@ export class OverviewComponent implements OnInit {
   addMostCommonBird() {
     var hashMap: Map<string, number> = new Map<string, number>();
 
-    this.birdwatches.birdWatches.forEach((birdwatch) => {
+    this.birdwatchData.birdWatches.forEach((birdwatch) => {
       birdwatch.sightings.forEach((sighting) => {
         if(hashMap.has(sighting.species) == false) { 
           hashMap.set(sighting.species, sighting.count);
@@ -128,11 +128,11 @@ export class OverviewComponent implements OnInit {
     var latestYearCount = 0;
     var diff;
 
-    this.birdwatches.birdWatches[0].sightings.forEach((sighting) => {
+    this.birdwatchData.birdWatches[0].sightings.forEach((sighting) => {
       firstYearCount += sighting.count;
     });
 
-    this.birdwatches.birdWatches[this.birdwatches.birdWatches.length-1].sightings.forEach((sighting) => {
+    this.birdwatchData.birdWatches[this.birdwatchData.birdWatches.length-1].sightings.forEach((sighting) => {
       latestYearCount += sighting.count;
     });
 
