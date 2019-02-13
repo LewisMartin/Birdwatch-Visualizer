@@ -1,6 +1,10 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { BreakdownComponent } from './breakdown.component';
+import { LoadingSpinnerComponent } from '../loading-spinner/loading-spinner.component';
+import { MaterialModule } from 'src/app/material';
+import { ChartsModule } from 'ng2-charts';
+import { HttpClientModule } from '@angular/common/http';
 
 describe('BreakdownComponent', () => {
   let component: BreakdownComponent;
@@ -8,7 +12,8 @@ describe('BreakdownComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ BreakdownComponent ]
+      imports: [HttpClientModule, MaterialModule, ChartsModule],
+      declarations: [ BreakdownComponent, LoadingSpinnerComponent ]
     })
     .compileComponents();
   }));

@@ -1,6 +1,10 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { TrackerComponent } from './tracker.component';
+import { LoadingSpinnerComponent } from '../loading-spinner/loading-spinner.component';
+import { MaterialModule } from 'src/app/material';
+import { ChartsModule } from 'ng2-charts';
+import { HttpClientModule } from '@angular/common/http';
 
 describe('TrackerComponent', () => {
   let component: TrackerComponent;
@@ -8,7 +12,8 @@ describe('TrackerComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ TrackerComponent ]
+      imports: [HttpClientModule, MaterialModule, ChartsModule],
+      declarations: [ TrackerComponent, LoadingSpinnerComponent ]
     })
     .compileComponents();
   }));
