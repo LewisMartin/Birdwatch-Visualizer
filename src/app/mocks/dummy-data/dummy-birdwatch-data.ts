@@ -26,7 +26,17 @@ export const DUMMY_BIRDWATCHES: Birdwatches = {
         },
         {
             species: BirdSpecies.Bluetit,
-            count: 2
+            count: 5
         }]
     }]
 };
+
+export const DUMMY_BIRDWATCH_STATS = {
+    birdwatchCount: '2',
+    overallSpeciesCount: '3',
+    yearWithMostBirds: DUMMY_BIRDWATCHES.birdWatches[1].reference,
+    yearWithMostSpecies: DUMMY_BIRDWATCHES.birdWatches[1].reference,
+    mostCommonBird: BirdSpecies.Starling,
+    firstBirdCount: 8,
+    latestBirdCount: 11, 
+}
