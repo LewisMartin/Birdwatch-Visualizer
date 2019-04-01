@@ -43,7 +43,7 @@ describe('NavComponent', () => {
     fixture.detectChanges();
     let href = fixture.debugElement.query(By.css('.app-title')).nativeElement.getAttribute('routerLink');
 
-    expect(href).toEqual("['/']");
+    expect(href).toEqual("/");
   });
 
   it('should have a link to breakdown page on menu', () => {
@@ -51,7 +51,7 @@ describe('NavComponent', () => {
     hamburger.click();
     let href = fixture.debugElement.query(By.css('.breakdown-link')).nativeElement.getAttribute('routerLink');
 
-    expect(href).toEqual("['breakdown']");
+    expect(href).toEqual("/breakdown");
   });
 
   it('should have a link to tracker page on menu', () => {
@@ -59,6 +59,6 @@ describe('NavComponent', () => {
     hamburger.click();
     let href = fixture.debugElement.query(By.css('.tracker-link')).nativeElement.getAttribute('routerLink');
 
-    expect(href).toEqual("['tracker']");
+    expect(href).toEqual("/tracker");
   });
 });
